@@ -1,44 +1,96 @@
+
+// function addTodo() {
+//     let inputValue = document.getElementById("todoInput").value;
+
+//     let listItem = document.createElement("div");
+
+//     let checkbox = document.createElement("input");
+//     checkbox.setAttribute("type", "checkbox");
+//     checkbox.onclick = function() {
+//         if (checkbox.checked) {
+//             textNode.style.textDecoration = "line-through";
+//         } else {
+//             textNode.style.textDecoration = "none";
+//         }
+//     };
+//     listItem.appendChild(checkbox);
+
+//     let textNode = document.createTextNode(inputValue);
+//     listItem.appendChild(textNode);
+
+//     let deleteButton = document.createElement("button");
+//     deleteButton.innerHTML = "X";
+//     deleteButton.onclick = function() {
+//         listItem.remove();
+//     };
+
+//     listItem.appendChild(deleteButton);
+//     document.getElementById("todoList").appendChild(listItem);
+//     document.getElementById("todoInput").value = "";
+// }
+
+// function addTodo() {
+//     let inputValue = document.getElementById("todoInput").value;
+
+//     let listItem = document.createElement("div");
+
+//     let checkbox = document.createElement("input");
+//     checkbox.setAttribute("type", "checkbox");
+//     let textNode = document.createTextNode(inputValue); // Define textNode here
+//     listItem.appendChild(checkbox);
+//     listItem.appendChild(textNode);
+
+//     checkbox.onclick = function() {
+//         if (checkbox.checked) {
+//             textNode.style.textDecoration = "line-through";
+//         } else {
+//             textNode.style.textDecoration = "none";
+//         }
+//     };
+
+//     let deleteButton = document.createElement("button");
+//     deleteButton.innerHTML = "X";
+//     deleteButton.onclick = function() {
+//         listItem.remove();
+//     };
+
+//     listItem.appendChild(deleteButton);
+//     document.getElementById("todoList").appendChild(listItem);
+//     document.getElementById("todoInput").value = "";
+// }
+
+
 function addTodo() {
     let inputValue = document.getElementById("todoInput").value;
-    if (inputValue === '') {
-      alert("Please enter a task!");
-      return;
-    }
-    // let checkbox = document.createElement("input");
-    // checkbox.setAttribute("type", "checkbox");
-
-
-
+  
     let listItem = document.createElement("div");
+  
+    let checkbox = document.createElement("input");
+    checkbox.setAttribute("type", "checkbox");
+  
+    let textSpan = document.createElement("span");
     let textNode = document.createTextNode(inputValue);
-    listItem.appendChild(textNode);
-    
+    textSpan.appendChild(textNode);
+  
+    listItem.appendChild(checkbox);
+    listItem.appendChild(textSpan);
+  
+    checkbox.onclick = function() {
+      if (checkbox.checked) {
+        textSpan.style.textDecoration = "line-through";
+      } else {
+        textSpan.style.textDecoration = "none";
+      }
+    };
+  
     let deleteButton = document.createElement("button");
     deleteButton.innerHTML = "X";
     deleteButton.onclick = function() {
       listItem.remove();
     };
-    
+  
     listItem.appendChild(deleteButton);
     document.getElementById("todoList").appendChild(listItem);
     document.getElementById("todoInput").value = "";
   }
-
-  
-// const textElement = document.getElementById('myText');
-
-// // Apply the text-decoration style to cross out the text
-// textElement.style.textDecoration = 'line-through';
-
-  
-
-
-
-//   <div class="todo-container">
-//   <h2>My Todo List</h2>
-//   <input type="text" id="todoInput" placeholder="Add new task">
-//   <button onclick="addTodo()">Add</button>
-//   <ul id="todoList"></ul>
-// </div>
-
   
