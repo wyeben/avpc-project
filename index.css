@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+
+.checkbox-tex{
+    display: flex;
+}
+
