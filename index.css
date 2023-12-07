@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+
+.checkbox-tex{
+    display: flex;
+}
+
+.delete-img{
+    width: 15px;
+    height: 15px;
+}
+
+.check-box{
+    width: 15px;
+    height: 15px;
+}
+
