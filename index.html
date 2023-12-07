@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo</title>
     <link rel="stylesheet" href="index.css">
 </head>
     <body>
-
+    <div>
+        <h1>My To Do List</h1>
+        <div class="checkbox-text">
+            <input class="check-box" type="checkbox" id="myCheckbox">
+            <button class="delete-icon"> <img class="delete-img" src="asset/delete icon svg.jpg" alt=""></button>
+        </div>
+        <div>
+            <input type="text" id="taskInput" value="">
+            <button type="button" onclick="addTask()">Add</button>
+            <button onclick="loadTasksFromLocalStorage()">Display</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+   
+    <script src="index.js"></script>
+    <script>
+        window.onload = function(){
+            loadTasksFromLocalStorage();
+        };
+    </script>
+</body>
         <div class="todo-container">
           <h2>My Todo List</h2>
           <ul class="todo-List" id="todoList"></ul>
